@@ -26,6 +26,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.triplet.play'
+apply plugin: 'jacoco'
 
 if (!project.hasProperty("storeP12File")) {
     ext.storeP12File = file("/")
@@ -91,6 +92,7 @@ android {
             applicationIdSuffix = ".debug"
             versionNameSuffix = '-DEBUG'
             manifestPlaceholders = [providerBuildType: "debug"]
+            testCoverageEnabled true
         }
         release {
             //noinspection GroovyAssignabilityCheck
