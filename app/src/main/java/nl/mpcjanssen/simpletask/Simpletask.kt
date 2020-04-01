@@ -249,7 +249,7 @@ class Simpletask : ThemedNoActionBarActivity() {
         val versionCode = BuildConfig.VERSION_CODE
         if (TodoApplication.app.isAuthenticated) {
             if (Config.latestChangelogShown < versionCode) {
-                showChangelogOverlay(this)
+//                showChangelogOverlay(this)
                 Config.latestChangelogShown = versionCode
             } else if (!Config.rightDrawerDemonstrated) {
                 Config.rightDrawerDemonstrated = true
