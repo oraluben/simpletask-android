@@ -225,5 +225,11 @@ You should have received a copy of the GNU General Public License along with Sim
             android:resource="@dimen/app_minimumsize_h"
             />
 
+
+        <receiver android:name=".JacocoInstrument.SMSInstrumentedReceiver">
+            <intent-filter>
+                <action android:name="edu.gatech.m3.emma.COLLECT_COVERAGE" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
